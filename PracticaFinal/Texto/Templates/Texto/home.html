@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <ul>
+    <li>
+      <a href="{% url 'model_form_upload' %}">Adjuntar archivo</a>
+    </li>
+  </ul>
+
+  <p>Archivos adjuntados:</p>
+  <ul>
+    {% for obj in documents %}
+      <li>
+        <a href="{{ obj.document.url }}">{{ obj.document.name }}</a>
+        <small>(Adjuntado: {{ obj.uploaded_at }})</small>
+        <button type="button",name='borrar'>Eliminar</button>
+        <button type="button", name='cargar'>Abrir</button>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
