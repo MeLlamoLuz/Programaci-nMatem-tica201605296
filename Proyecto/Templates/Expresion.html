@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de autómatas</title>
+</head>
+<body>
+<h1>Generador de autómatas</h1>
+<form method="POST" action="">
+    {% csrf_token %}
+  <p>Ingresa la expresión regular: </p>
+  <input type="text" name="regex" value=""><br>
+  <input type="submit" value="Submit">
+</form>
+{% block content %}
+<p><strong>{{expresion}}</strong></p><br>
+<p><strong>{{afnd}}</strong></p>
+    <div><p>{{lenguaje1}}</p></div>
+    <div><p>{{estados1}}</p></div>
+    <div><p>{{estadoinicial1}}</p></div>
+    <div><p>{{estadosaceptacion1}}</p></div>
+    <div><p>{{transiciones1}}</p></div>
+    <div><p>{{texto1}}</p>
+        <p>{{latex1}}</p></div>
+    <div><p>{{texto2}}</p>
+        <p>{{graph1}}</p></div><br>
+<p><strong>{{afd}}</strong></p>
+    <div><p>{{lenguaje2}}</p></div>
+    <div><p>{{estados2}}</p></div>
+    <div><p>{{estadoinicial2}}</p></div>
+    <div><p>{{estadosaceptacion2}}</p></div>
+    <div><p>{{transiciones2}}</p></div>
+    <div><p>{{texto3}}</p>
+        <p>{{latex2}}</p></div>
+    <div><p>{{texto4}}
+        </p>{{graph2}}</p></div><br>
+
+{% endblock %}
+</body>
+</html>

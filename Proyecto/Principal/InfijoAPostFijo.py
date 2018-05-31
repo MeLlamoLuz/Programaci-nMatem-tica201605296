@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from pythonds.basic.stack import Stack
 
 
@@ -32,7 +34,4 @@ def infijoAPostfijo(regex):
 
     while not opStack.isEmpty():
         ListaPost.append(opStack.pop())
-    return "".join(ListaPost)
-
-
-print infijoAPostfijo("(ab*)*c")
+    return "Expresion regular en lenguaje postfijo: " + "".join(ListaPost)

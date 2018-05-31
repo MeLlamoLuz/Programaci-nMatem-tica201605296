@@ -2,16 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ingresa tu expresión regular</title>
+    <title>Lenguaje postfijo a infijo</title>
   </head>
   <body>
   {% block content %}
   <form method="POST"  action="">
       {% csrf_token %}
-      <input type="text" name="textbar" value=""><br>
+      <p>Ingresa tu expresión regular:</p>
+      <input type="text" name="texto" value=""><br>
       <input type="submit" value="Submit">
   </form>
-  <li>En lenguaje postfijo la expresión es: {{result}}</li><br>
+  <p>{{result}}</p><br>
   {% endblock %}
   </body>
 </html>
